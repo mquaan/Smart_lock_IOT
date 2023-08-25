@@ -1,0 +1,1844 @@
+[
+    {
+        "id": "2ff989c6e9d7f5df",
+        "type": "tab",
+        "label": "DA_CK",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ba5255badd08ec6c",
+        "type": "group",
+        "z": "2ff989c6e9d7f5df",
+        "name": "HOME",
+        "style": {
+            "label": true,
+            "stroke": "#0070c0"
+        },
+        "nodes": [
+            "29295db395824bc8",
+            "8bba268c432b5955",
+            "ea31552b83bcafa7",
+            "d428a5c9f84ea19c",
+            "6aea039832f82344"
+        ],
+        "x": 514,
+        "y": 459,
+        "w": 432,
+        "h": 202
+    },
+    {
+        "id": "849e02e247ed7746",
+        "type": "group",
+        "z": "2ff989c6e9d7f5df",
+        "name": "SECURITY",
+        "style": {
+            "stroke": "#0070c0",
+            "label": true
+        },
+        "nodes": [
+            "8c35ccbd5f6738be",
+            "9977d885e2151482",
+            "256c1ca59478f7b2",
+            "93e7f3c0196d2e27",
+            "08c7b65904957c37",
+            "c835ed25e78603e3",
+            "2151b3c9f42e2ff6",
+            "9673a31cad665294",
+            "8ff2e7714950007a",
+            "62ea6d9613128c95",
+            "3fa701c7f1d4b001",
+            "e8f25033ba65fd92",
+            "48760e82b11c8b30",
+            "1713db359ae539ca",
+            "95594269e2899505",
+            "355aca52df34f354",
+            "e7bd980a300251bf",
+            "e653cdb3768c530d",
+            "4c54bd95f6c455a5",
+            "9088bd1f56a92ce9"
+        ],
+        "x": 514,
+        "y": 699,
+        "w": 1712,
+        "h": 702
+    },
+    {
+        "id": "b830319b92c2ddd0",
+        "type": "group",
+        "z": "2ff989c6e9d7f5df",
+        "name": "LOG OUT",
+        "style": {
+            "stroke": "#0070c0",
+            "label": true
+        },
+        "nodes": [
+            "635eeee4577fa60c"
+        ],
+        "x": 94,
+        "y": 219,
+        "w": 172,
+        "h": 82
+    },
+    {
+        "id": "ee17f63860c28450",
+        "type": "group",
+        "z": "2ff989c6e9d7f5df",
+        "name": "SIGN IN",
+        "style": {
+            "stroke": "#0070c0",
+            "label": true
+        },
+        "nodes": [
+            "718f497854e2a2c9",
+            "a71c67f3b0d3fda2",
+            "ac2da54fe90921d7",
+            "f56a9d1239060f79",
+            "80ab12652c90b08d",
+            "289e4afd153b1145",
+            "a899a375881433c6",
+            "4451c278389bb137",
+            "5c0aae0a1596e65a",
+            "ba6992f141f569fa",
+            "96abe5b3abc6d174",
+            "3475ea9d61a70a4e",
+            "6c60857bd7a0caf5",
+            "251802719a4b2043",
+            "24e45f22fdc9c08c",
+            "a026b6c1e02e7d93",
+            "d9750a7c69e68dbb",
+            "6fb46318e80ceaf5",
+            "969e2553259a4b8b",
+            "4b2d5551250eb208",
+            "348c952ba6d3d733"
+        ],
+        "x": 514,
+        "y": 39,
+        "w": 1472,
+        "h": 382
+    },
+    {
+        "id": "466b2e3fa58cce68",
+        "type": "group",
+        "z": "2ff989c6e9d7f5df",
+        "name": "HISTORY",
+        "style": {
+            "stroke": "#0070c0",
+            "label": true
+        },
+        "nodes": [
+            "f9df67c11d631007",
+            "f5c9000d8f7fd8a8",
+            "61363cffaf1c98ab",
+            "6aeba27337e22435",
+            "369651d644432977",
+            "1720ca347692f208",
+            "e92e6651800ee199",
+            "cf544ca452e89945",
+            "b6a130b6adc7e052",
+            "9de2586a0f1291f6",
+            "35fb7909d3bab76a",
+            "b62d66f1af83f3c4",
+            "731fd701a5be24e4",
+            "1a3060e3986e8ed5",
+            "57cb289ed41cd28c",
+            "aa658693efa22df6",
+            "97974e96906fc2e7"
+        ],
+        "x": 514,
+        "y": 1439,
+        "w": 1552,
+        "h": 382
+    },
+    {
+        "id": "718f497854e2a2c9",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Auto Login Page",
+        "func": "msg.payload = {\n    \"hide\": \"HOME\",\n    \"tab\": \"SIGN IN\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 380,
+        "wires": [
+            [
+                "a71c67f3b0d3fda2"
+            ]
+        ]
+    },
+    {
+        "id": "a71c67f3b0d3fda2",
+        "type": "ui_ui_control",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "",
+        "events": "change",
+        "x": 920,
+        "y": 260,
+        "wires": [
+            [
+                "f56a9d1239060f79"
+            ]
+        ]
+    },
+    {
+        "id": "ac2da54fe90921d7",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Hide tab HOME",
+        "func": "msg.payload = {\n    \"tabs\":\n    {\n        \"hide\": [\"HOME\"]\n    }\n}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "a71c67f3b0d3fda2"
+            ]
+        ]
+    },
+    {
+        "id": "f56a9d1239060f79",
+        "type": "ui_form",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "",
+        "label": "",
+        "group": "93874dee61ba69a9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "🤵‍♂️ Username",
+                "value": "user",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "🔒 Password",
+                "value": "pass",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "user": "",
+            "pass": ""
+        },
+        "payload": "",
+        "submit": "Login",
+        "cancel": "Cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 1130,
+        "y": 260,
+        "wires": [
+            [
+                "80ab12652c90b08d"
+            ]
+        ]
+    },
+    {
+        "id": "80ab12652c90b08d",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "check_login",
+        "func": "var user_admin = flow.get(\"web_pass\");\nvar pass_admin = flow.get(\"web_pass\");\n\nif (msg.payload.user == user_admin && msg.payload.pass == pass_admin)\n    msg.payload = true;\nelse\n    msg.payload = false;\n\nflow.set(\"msg\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 260,
+        "wires": [
+            [
+                "289e4afd153b1145",
+                "5c0aae0a1596e65a",
+                "ba6992f141f569fa",
+                "6c60857bd7a0caf5",
+                "24e45f22fdc9c08c",
+                "6fb46318e80ceaf5",
+                "3475ea9d61a70a4e"
+            ]
+        ]
+    },
+    {
+        "id": "289e4afd153b1145",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Move to tab HOME",
+        "func": "msg.payload = flow.get(\"msg\");\nif(msg.payload == true)\n{\n    msg.payload = {\n        \"tab\": \"HOME\"\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 360,
+        "wires": [
+            [
+                "a899a375881433c6",
+                "a026b6c1e02e7d93"
+            ]
+        ]
+    },
+    {
+        "id": "a899a375881433c6",
+        "type": "ui_ui_control",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "",
+        "events": "change",
+        "x": 1900,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4451c278389bb137",
+        "type": "ui_toast",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "position": "top right",
+        "displayTime": "2",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1870,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5c0aae0a1596e65a",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Show notification",
+        "func": "msg.payload = flow.get(\"msg\");\nif(msg.payload == false)\n    msg.payload = \"❌ Login Failed\";\nelse\n    msg.payload = \"✅ Login Succesfully\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 120,
+        "wires": [
+            [
+                "4451c278389bb137"
+            ]
+        ]
+    },
+    {
+        "id": "ba6992f141f569fa",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Hide tab SIGN IN",
+        "func": "msg.payload = flow.get(\"msg\");\nif (msg.payload == true) {\n    msg.payload = {\n        \"tabs\":\n        {\n            \"hide\": [\"SIGN IN\"]\n        } \n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 160,
+        "wires": [
+            [
+                "a899a375881433c6"
+            ]
+        ]
+    },
+    {
+        "id": "96abe5b3abc6d174",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Hide tab HISTORY",
+        "func": "msg.payload = {\n    \"tabs\":\n    {\n        \"hide\": [\"HISTORY\"]\n    }\n}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "a71c67f3b0d3fda2"
+            ]
+        ]
+    },
+    {
+        "id": "3475ea9d61a70a4e",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Show tab HISTORY",
+        "func": "msg.payload = flow.get(\"msg\");\nif (msg.payload == true) {\n    msg.payload = {\n        \"tabs\":\n        {\n            \"show\": [\"HISTORY\"]\n        } \n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 240,
+        "wires": [
+            [
+                "a899a375881433c6"
+            ]
+        ]
+    },
+    {
+        "id": "6c60857bd7a0caf5",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Show tab HOME",
+        "func": "msg.payload = flow.get(\"msg\");\nif (msg.payload == true) {\n    msg.payload = {\n        \"tabs\":\n        {\n            \"show\": [\"HOME\"]\n        } \n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 200,
+        "wires": [
+            [
+                "a899a375881433c6"
+            ]
+        ]
+    },
+    {
+        "id": "251802719a4b2043",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Hide tab LOG OUT",
+        "func": "msg.payload = {\n    \"tabs\":\n    {\n        \"hide\": [\"LOG OUT\"]\n    }\n}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "a71c67f3b0d3fda2"
+            ]
+        ]
+    },
+    {
+        "id": "24e45f22fdc9c08c",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "show tab LOG OUT",
+        "func": "msg.payload = flow.get(\"msg\");\nif (msg.payload == true) {\n    msg.payload = {\n        \"tabs\":\n        {\n            \"show\": [\"LOG OUT\"]\n        }\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 320,
+        "wires": [
+            [
+                "a899a375881433c6"
+            ]
+        ]
+    },
+    {
+        "id": "94657bf01efc9a8c",
+        "type": "inject",
+        "z": "2ff989c6e9d7f5df",
+        "name": "Auto Login tabs và hide tabs",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "ac2da54fe90921d7",
+                "96abe5b3abc6d174",
+                "251802719a4b2043",
+                "718f497854e2a2c9",
+                "29295db395824bc8",
+                "d9750a7c69e68dbb",
+                "1713db359ae539ca",
+                "969e2553259a4b8b"
+            ]
+        ]
+    },
+    {
+        "id": "635eeee4577fa60c",
+        "type": "ui_button",
+        "z": "2ff989c6e9d7f5df",
+        "g": "b830319b92c2ddd0",
+        "name": "",
+        "group": "9b29e28b6e79a515",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Log out ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "logout",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "ac2da54fe90921d7",
+                "96abe5b3abc6d174",
+                "718f497854e2a2c9",
+                "251802719a4b2043",
+                "d9750a7c69e68dbb"
+            ]
+        ]
+    },
+    {
+        "id": "29295db395824bc8",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ba5255badd08ec6c",
+        "name": "Information",
+        "func": "var date = new Date(msg.payload);\n\n// Tên thiết bị \nmsg.name = \"Smart lock\";\n\n// Màu\nmsg.color = \"Black\";\n\n// Ngày tháng năm\nmsg.date = date.toString().slice(4, 16);\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "8bba268c432b5955",
+                "ea31552b83bcafa7",
+                "d428a5c9f84ea19c"
+            ]
+        ]
+    },
+    {
+        "id": "a026b6c1e02e7d93",
+        "type": "http request",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/trigger/welcome/with/key/dziiS-eaWT58pIL2qhbB4n",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1870,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c35ccbd5f6738be",
+        "type": "ui_gauge",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "group": "f35e9ebb4d41a5e0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "",
+        "label": "",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "1000000",
+        "colors": [
+            "#00b500",
+            "#00b500",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1510,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "9977d885e2151482",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Tạo mk random",
+        "func": "var num = Math.floor(Math.random() * 1000000);\nflow.set(\"lock\", false);\nmsg.payload = num;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 900,
+        "wires": [
+            [
+                "8c35ccbd5f6738be",
+                "93e7f3c0196d2e27",
+                "08c7b65904957c37",
+                "95594269e2899505"
+            ]
+        ]
+    },
+    {
+        "id": "256c1ca59478f7b2",
+        "type": "change",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1640,
+        "y": 820,
+        "wires": [
+            [
+                "48760e82b11c8b30"
+            ]
+        ]
+    },
+    {
+        "id": "93e7f3c0196d2e27",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Disable button",
+        "func": "msg.payload = flow.get(\"lock\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 940,
+        "wires": [
+            [
+                "256c1ca59478f7b2"
+            ]
+        ]
+    },
+    {
+        "id": "08c7b65904957c37",
+        "type": "delay",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "15",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 1040,
+        "wires": [
+            [
+                "c835ed25e78603e3",
+                "355aca52df34f354"
+            ]
+        ]
+    },
+    {
+        "id": "c835ed25e78603e3",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Enable button",
+        "func": "msg.payload = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1080,
+        "wires": [
+            [
+                "256c1ca59478f7b2"
+            ]
+        ]
+    },
+    {
+        "id": "2151b3c9f42e2ff6",
+        "type": "ui_form",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "label": "",
+        "group": "3c0d952df1f6d1f6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Enter zip/code to open door ",
+                "value": "pass_remote",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "pass_remote": ""
+        },
+        "payload": "",
+        "submit": "Open",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 1070,
+        "y": 1280,
+        "wires": [
+            [
+                "9673a31cad665294"
+            ]
+        ]
+    },
+    {
+        "id": "9673a31cad665294",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Kiểm tra mk đúng / sai",
+        "func": "var pass_admin = flow.get(\"pass_admin\");\n\nif(msg.payload.pass_remote != \"\")\n{\n    if (msg.payload.pass_remote == pass_admin)\n        msg.payload = 1;\n    else \n        msg.payload = 0;\n\n    flow.set(\"msgg\", msg.payload);\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1280,
+        "wires": [
+            [
+                "62ea6d9613128c95"
+            ]
+        ]
+    },
+    {
+        "id": "8ff2e7714950007a",
+        "type": "ui_toast",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "position": "top right",
+        "displayTime": "2",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1910,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "62ea6d9613128c95",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Show notification",
+        "func": "msg.payload = flow.get(\"msgg\");\nif(msg.payload == 0)\n    msg.payload = \"❌ Wrong\";\nelse if (msg.payload == 1)\n{\n    msg.payload = \"✅ True\";\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 1280,
+        "wires": [
+            [
+                "8ff2e7714950007a",
+                "e7bd980a300251bf"
+            ]
+        ]
+    },
+    {
+        "id": "3fa701c7f1d4b001",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Set pass_admin vào flow",
+        "func": "flow.set(\"pass_admin\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1280,
+        "wires": [
+            [
+                "2151b3c9f42e2ff6"
+            ]
+        ]
+    },
+    {
+        "id": "d9750a7c69e68dbb",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Hide tab SECURITY",
+        "func": "msg.payload = {\n    \"tabs\":\n    {\n        \"hide\": [\"SECURITY\"]\n    }\n}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "a71c67f3b0d3fda2"
+            ]
+        ]
+    },
+    {
+        "id": "6fb46318e80ceaf5",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Show tab SECURITY",
+        "func": "msg.payload = flow.get(\"msg\");\nif (msg.payload == true) {\n    msg.payload = {\n        \"tabs\":\n        {\n            \"show\": [\"SECURITY\"]\n        } \n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 280,
+        "wires": [
+            [
+                "a899a375881433c6"
+            ]
+        ]
+    },
+    {
+        "id": "e8f25033ba65fd92",
+        "type": "mqtt out",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "topic": "04_login_remote",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0057f7cb360e0ba1",
+        "x": 2110,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "48760e82b11c8b30",
+        "type": "ui_button",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "group": "f35e9ebb4d41a5e0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "🔒Create",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 640,
+        "y": 900,
+        "wires": [
+            [
+                "9977d885e2151482"
+            ]
+        ]
+    },
+    {
+        "id": "1713db359ae539ca",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Auto enable button",
+        "func": "msg.payload = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 820,
+        "wires": [
+            [
+                "256c1ca59478f7b2"
+            ]
+        ]
+    },
+    {
+        "id": "95594269e2899505",
+        "type": "mqtt out",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "topic": "04_Dynamic_pass",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "786813e236a027fd",
+        "x": 1730,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8bba268c432b5955",
+        "type": "ui_text",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ba5255badd08ec6c",
+        "group": "23aff7cb05f9c05a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Device:",
+        "format": "{{msg.name}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 860,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ea31552b83bcafa7",
+        "type": "ui_text",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ba5255badd08ec6c",
+        "group": "23aff7cb05f9c05a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Color:",
+        "format": "{{msg.color}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d428a5c9f84ea19c",
+        "type": "ui_text",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ba5255badd08ec6c",
+        "group": "23aff7cb05f9c05a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Date:",
+        "format": "{{msg.date}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6aea039832f82344",
+        "type": "ui_media",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ba5255badd08ec6c",
+        "group": "23aff7cb05f9c05a",
+        "name": "",
+        "width": 6,
+        "height": 7,
+        "order": 5,
+        "category": "LockDoor",
+        "file": "1111.png",
+        "layout": "center",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 850,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "355aca52df34f354",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Reset mk về 0",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1000,
+        "wires": [
+            [
+                "8c35ccbd5f6738be",
+                "95594269e2899505"
+            ]
+        ]
+    },
+    {
+        "id": "e7bd980a300251bf",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Gửi tín hiệu",
+        "func": "msg.payload = flow.get(\"msgg\");\nif (msg.payload == 0)\n    msg.payload = \"Wrong\";\nelse if (msg.payload == 1) {\n    msg.payload = \"Remote\";\n\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1360,
+        "wires": [
+            [
+                "e8f25033ba65fd92"
+            ]
+        ]
+    },
+    {
+        "id": "e653cdb3768c530d",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Lấy số gói dữ liệu",
+        "func": "msg.payload = flow.get(\"last_id\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1180,
+        "wires": [
+            [
+                "4c54bd95f6c455a5"
+            ]
+        ]
+    },
+    {
+        "id": "4c54bd95f6c455a5",
+        "type": "http request",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2241884/feeds.json?api_key=RZRCPUXFGAFMUZJ4&results={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 850,
+        "y": 1180,
+        "wires": [
+            [
+                "9088bd1f56a92ce9"
+            ]
+        ]
+    },
+    {
+        "id": "9088bd1f56a92ce9",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "849e02e247ed7746",
+        "name": "Lấy admin_pass từ trên cloud ",
+        "func": "var history_feeds = msg.payload.feeds;\n\nvar len = history_feeds.length - 1;\n\nmsg.payload = history_feeds[len].field3;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1180,
+        "wires": [
+            [
+                "3fa701c7f1d4b001"
+            ]
+        ]
+    },
+    {
+        "id": "599e49dee2b74758",
+        "type": "inject",
+        "z": "2ff989c6e9d7f5df",
+        "name": "Cứ 2s cập nhật dữ liệu trên cloud",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 1340,
+        "wires": [
+            [
+                "e653cdb3768c530d",
+                "731fd701a5be24e4"
+            ]
+        ]
+    },
+    {
+        "id": "969e2553259a4b8b",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Lấy số gói dữ liệu",
+        "func": "msg.payload = flow.get(\"last_id\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 80,
+        "wires": [
+            [
+                "348c952ba6d3d733"
+            ]
+        ]
+    },
+    {
+        "id": "348c952ba6d3d733",
+        "type": "http request",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2241884/feeds.json?api_key=RZRCPUXFGAFMUZJ4&results={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 850,
+        "y": 80,
+        "wires": [
+            [
+                "4b2d5551250eb208"
+            ]
+        ]
+    },
+    {
+        "id": "4b2d5551250eb208",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "ee17f63860c28450",
+        "name": "Lấy tk_mk từ trên cloud",
+        "func": "var history_feeds = msg.payload.feeds;\n\nfor (let i = history_feeds.length - 1; i >= 0; i--) {\n    if (history_feeds[i].field4 != null) {\n        flow.set(\"web_pass\", history_feeds[i].field4);\n        break;\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 80,
+        "wires": [
+            [
+                "f56a9d1239060f79"
+            ]
+        ]
+    },
+    {
+        "id": "f9df67c11d631007",
+        "type": "mqtt in",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "topic": "04_Keypad",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "786813e236a027fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 610,
+        "y": 1560,
+        "wires": [
+            [
+                "61363cffaf1c98ab"
+            ]
+        ]
+    },
+    {
+        "id": "f5c9000d8f7fd8a8",
+        "type": "mqtt in",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "topic": "04_Fingerprint",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "786813e236a027fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 610,
+        "y": 1660,
+        "wires": [
+            [
+                "6aeba27337e22435"
+            ]
+        ]
+    },
+    {
+        "id": "61363cffaf1c98ab",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "By_keypad",
+        "func": "msg.topic = \"Unlocked by password ID ~\" + msg.payload;\nmsg.info = \"Password ID ~\" + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1560,
+        "wires": [
+            [
+                "1720ca347692f208",
+                "97974e96906fc2e7"
+            ]
+        ]
+    },
+    {
+        "id": "6aeba27337e22435",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "By_fingerprint",
+        "func": "msg.topic = \"Unlocked by fingerprint ID ~\" + msg.payload;\nmsg.info = \"Fingerprint ID ~\" + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1660,
+        "wires": [
+            [
+                "1720ca347692f208",
+                "97974e96906fc2e7"
+            ]
+        ]
+    },
+    {
+        "id": "369651d644432977",
+        "type": "mqtt in",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "topic": "04_admin_password",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "786813e236a027fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1210,
+        "y": 1780,
+        "wires": [
+            [
+                "35fb7909d3bab76a"
+            ]
+        ]
+    },
+    {
+        "id": "1720ca347692f208",
+        "type": "change",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 1660,
+        "wires": [
+            [
+                "e92e6651800ee199"
+            ]
+        ]
+    },
+    {
+        "id": "e92e6651800ee199",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "update time access",
+        "func": "var date = new Date(msg.payload);\nmsg.datetime = date.toString().slice(4,24);\nmsg.admin = flow.get(\"ad_pass\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 1660,
+        "wires": [
+            [
+                "cf544ca452e89945"
+            ]
+        ]
+    },
+    {
+        "id": "cf544ca452e89945",
+        "type": "http request",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/update?api_key=0DAOH0SWYAVAGATJ&field1={{topic}}&field2={{datetime}}&field3={{admin}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1970,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6a130b6adc7e052",
+        "type": "mqtt in",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "topic": "04_Dynamic_password",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "786813e236a027fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 640,
+        "y": 1760,
+        "wires": [
+            [
+                "9de2586a0f1291f6"
+            ]
+        ]
+    },
+    {
+        "id": "9de2586a0f1291f6",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "By_dynamic_password",
+        "func": "msg.topic = \"Unlocked by dynamic password\";\nmsg.info = \"Dynamic password\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1760,
+        "wires": [
+            [
+                "1720ca347692f208",
+                "97974e96906fc2e7"
+            ]
+        ]
+    },
+    {
+        "id": "35fb7909d3bab76a",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "set admin pass into flow",
+        "func": "flow.set(\"ad_pass\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 1780,
+        "wires": [
+            [
+                "e92e6651800ee199"
+            ]
+        ]
+    },
+    {
+        "id": "b62d66f1af83f3c4",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "Lấy số gói dữ liệu",
+        "func": "flow.set(\"last_id\", msg.payload.channel.last_entry_id);\nmsg.payload =  msg.payload.channel.last_entry_id;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1480,
+        "wires": [
+            [
+                "57cb289ed41cd28c"
+            ]
+        ]
+    },
+    {
+        "id": "731fd701a5be24e4",
+        "type": "http request",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2241884/feeds.json?api_key=RZRCPUXFGAFMUZJ4&results=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 1480,
+        "wires": [
+            [
+                "b62d66f1af83f3c4"
+            ]
+        ]
+    },
+    {
+        "id": "1a3060e3986e8ed5",
+        "type": "function",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "Lấy danh sách lịch sử",
+        "func": "var LogHistory = [];\nvar history_feeds = msg.payload.feeds;\n\nfor (let i = history_feeds.length - 1; i >= 0; i--)\n{\n    if (history_feeds[i].field1 != null && history_feeds[i].field2 != null)\n    {\n        if(history_feeds[i].field1 != \"04_admin_password\")\n        {\n            var obj = {};\n            obj['type'] = history_feeds[i].field1;\n            obj['date'] = history_feeds[i].field2;\n            LogHistory.push(obj);\n            if(LogHistory.length == 20)\n                break;\n        }\n    }\n}\nmsg = {};\nmsg.payload = LogHistory;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1480,
+        "wires": [
+            [
+                "aa658693efa22df6"
+            ]
+        ]
+    },
+    {
+        "id": "57cb289ed41cd28c",
+        "type": "http request",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2241884/feeds.json?api_key=RZRCPUXFGAFMUZJ4&results={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 1480,
+        "wires": [
+            [
+                "1a3060e3986e8ed5"
+            ]
+        ]
+    },
+    {
+        "id": "aa658693efa22df6",
+        "type": "ui_template",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "group": "33815fa3b786cf34",
+        "name": "Logs",
+        "order": 1,
+        "width": "7",
+        "height": "8",
+        "format": "<ul>\n    <li ng-repeat = \"x in msg.payload\">\n        <font color = \"red\">{{x.type}}</font>\n        <ul>\n            <li>{{x.date}}</li>\n        </ul>\n        <br><br>\n    </li>\n</ul>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1590,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97974e96906fc2e7",
+        "type": "ui_text",
+        "z": "2ff989c6e9d7f5df",
+        "g": "466b2e3fa58cce68",
+        "group": "23aff7cb05f9c05a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "🔓 Last accessed:",
+        "format": "{{msg.info}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1310,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "d5fe0fc3a7c743bf",
+        "type": "ui_spacer",
+        "z": "2ff989c6e9d7f5df",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7d79bf1a8470102f",
+        "type": "ui_spacer",
+        "z": "2ff989c6e9d7f5df",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "72b7168dcc0e7f5a",
+        "type": "ui_spacer",
+        "z": "2ff989c6e9d7f5df",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "93874dee61ba69a9",
+        "type": "ui_group",
+        "name": "🗝️ Log in",
+        "tab": "6424cf306fc2d29a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9b29e28b6e79a515",
+        "type": "ui_group",
+        "name": "Thank you for using this app ❤️",
+        "tab": "5699b710575f5107",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f35e9ebb4d41a5e0",
+        "type": "ui_group",
+        "name": "Dynamic password",
+        "tab": "3a3408431e6fbf6d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3c0d952df1f6d1f6",
+        "type": "ui_group",
+        "name": "Remote opening lock",
+        "tab": "3a3408431e6fbf6d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0057f7cb360e0ba1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "786813e236a027fd",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "23aff7cb05f9c05a",
+        "type": "ui_group",
+        "name": "Smart lock",
+        "tab": "b30cac9c34cf6dd1",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "33815fa3b786cf34",
+        "type": "ui_group",
+        "name": "Access device history",
+        "tab": "5e97ce24f0c12a6a",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6424cf306fc2d29a",
+        "type": "ui_tab",
+        "name": "SIGN IN",
+        "icon": "mi-login",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5699b710575f5107",
+        "type": "ui_tab",
+        "name": "LOG OUT",
+        "icon": "logout",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3a3408431e6fbf6d",
+        "type": "ui_tab",
+        "name": "SECURITY",
+        "icon": "security",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b30cac9c34cf6dd1",
+        "type": "ui_tab",
+        "name": "HOME",
+        "icon": "home",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5e97ce24f0c12a6a",
+        "type": "ui_tab",
+        "name": "HISTORY",
+        "icon": "history",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
