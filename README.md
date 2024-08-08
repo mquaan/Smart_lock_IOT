@@ -1,79 +1,93 @@
-# Smart Lock Project
+# Dự án Khóa cửa thông minh - IOT
 
-## Overview
-This project involves the design and implementation of a smart lock system, which can be controlled using various methods such as fingerprint recognition, keypad input, and remote access via a web interface.
+## Tổng quan
+Dự án này liên quan đến việc thiết kế và triển khai hệ thống khóa cửa thông minh, có thể được điều khiển bằng nhiều phương pháp như nhận diện vân tay, nhập mật mã và truy cập từ xa qua giao diện website.
 
-## Team Members
-- **Doãn Anh Khoa** - 21127076
-- **Nguyễn Minh Quân (Team Leader)** - 21127143
-- **Phạm Sĩ Phú** - 21127537
+## Thành viên Nhóm (đến từ 21CLC - HCMUS)
+- **Nguyễn Minh Quân (Nhóm trưởng)**
+- **Doãn Anh Khoa**
+- **Phạm Sĩ Phú**
 
-## Table of Contents
-1. [Project Overview](#overview)
-2. [Features](#features)
-3. [System Architecture](#system-architecture)
-4. [3D Design](#3d-design)
-5. [Web Interface](#web-interface)
-6. [NodeRED Flow Explanation](#nodered-flow-explanation)
-7. [References](#references)
+## Mục lục
+1. [Tổng quan Dự án](#tổng-quan)
+2. [Tính năng](#tính-năng)
+3. [Kiến trúc Hệ thống](#kiến-trúc-hệ-thống)
+4. [Thiết kế 3D](#thiết-kế-3d)
+5. [Giao diện Website](#giao-diện-web)
+6. [Giải thích NodeRED Flow](#giải-thích-nodered-flow)
+7. [Tài liệu tham khảo](#tài-liệu-tham-khảo)
 
-## Features
-### Device Features
-- **Manual Unlocking**: Unlock the door from inside using a button.
-- **LCD Display**: Display messages and status information.
-- **Fingerprint Sensor**: Unlock the door using registered fingerprints.
-- **Keypad**: Unlock the door using a numeric password.
-- **Admin Functions**: Add or remove passwords and fingerprints through the keypad.
-- **Security Alerts**: Sound an alarm after 5 failed access attempts and lock the system for 2 minutes.
-- **Emergency Notification**: Send emergency notifications to the owner.
+## Tính năng
+### Tính năng của thiết bị vật lý
+- **Mở khóa thủ công**: Mở khóa cửa từ bên trong bằng nút nhấn.
+- **Màn hình LCD**: Hiển thị tin nhắn và thông tin trạng thái.
+- **Cảm biến vân tay**: Mở khóa cửa bằng cách sử dụng vân tay đã đăng ký.
+- **Bàn phím**: Mở khóa cửa bằng cách nhập mật mã số.
+- **Chức năng quản lý**: Thêm hoặc xóa mật mã và vân tay thông qua bàn phím.
+- **Cảnh báo an ninh**: Kêu báo động sau 5 lần truy cập thất bại, khóa hệ thống trong 2 phút và gửi thông báo khẩn cấp đến chủ nhà.
 
-### Web and Cloud Features
-- **User Authentication**: Login to the web interface with predefined credentials.
-- **Device Status**: Display device status and recent access logs.
-- **Dynamic Password**: Generate temporary passwords for guest access.
-- **Remote Unlock**: Unlock the door remotely through the web interface.
-- **Data Storage**: Store access logs and user data on the cloud.
+### Tính năng của Web và Cloud
+- **Xác thực người dùng**: Đăng nhập vào giao diện web với thông tin đã xác định trước.
+- **Trạng thái thiết bị**: Hiển thị trạng thái thiết bị và nhật ký truy cập gần đây.
+- **Mật mã tạm thời**: Tạo mật mã tạm thời cho khách có thể mở khóa.
+- **Mở khóa từ xa**: Mở khóa cửa từ xa qua giao diện web.
+- **Lưu trữ dữ liệu**: Lưu trữ nhật ký truy cập và dữ liệu người dùng trên cloud.
 
-## System Architecture
-![Data Flow Diagram](link-to-diagram)
+## Kiến trúc Hệ thống
+![Sơ đồ truyền nhận Dữ liệu](./images/diagram.png)
 
-### Data Flow
-1. **Buzzer**: Receives digital signals from the Wemos board.
-2. **Relay**: Controls the electronic lock based on signals from the Wemos board.
-3. **LCD Screen**: Displays status messages and is controlled by the Arduino Uno.
-4. **Keypad**: Sends character inputs to the Arduino Uno.
-5. **Fingerprint Sensor**: Communicates with the Arduino Uno for fingerprint recognition.
-6. **Wemos Board**: Connects to Wi-Fi and communicates with the MQTT broker and web server.
-7. **MQTT Broker**: Facilitates communication between the Wemos board and the web server.
-8. **NodeRED**: Manages data flows and interacts with IFTTT for notifications.
+### Luồng dữ liệu
+1. **Mạch Arduino Uno**: Giao tiếp với mạch Wemos và LCD, Keypad, Button, Cảm biến vân tay.
+2. **Mạch Wemos**: Kết nối với Buzzer, Relay; kết nối Wi-Fi và giao tiếp với broker MQTT.
+3. **Buzzer**: Nhận tín hiệu số từ bo mạch Wemos.
+4. **Relay và khóa điện**: Relay điều khiển khóa điện tử dựa trên tín hiệu từ bo mạch Wemos.
+5. **Màn hình LCD**: Hiển thị tin nhắn trạng thái và được điều khiển bởi Arduino Uno.
+6. **Bàn phím**: Gửi ký tự đầu vào đến Arduino Uno.
+7. **Nút nhấn**: Mạch Uno nhận tín hiệu digital từ nút nhấn.
+8. **Cảm biến vân tay**: Giao tiếp với Arduino Uno để nhận diện vân tay.
+9. **Broker MQTT**: Hỗ trợ giao tiếp giữa mạch Wemos và web server.
+10. **NodeRED**: GIao tiếp với MQTT, quản lý luồng dữ liệu và tương tác với IFTTT để gửi thông báo.
+11. **Cloud (ThinkSpeak.com)**: Truyền nhận dữ liệu vói server.
 
-## 3D Design
-![3D Design](link-to-3d-design-image)
-- **Part A**: External unit with fingerprint sensor and keypad.
-- **Part B**: Internal unit with manual unlock button and LCD display.
+## Thiết kế 3D
+![Thiết kế 3D - 1](./images/3D.png)
+![Thiết kế 3D - 2](./images/3D-2.png)
+- **Phần A**: Đơn vị bên ngoài với màn hình LCD, cảm biến vân tay và bàn phím.
+- **Phần B**: Đơn vị bên trong với nút mở khóa thủ công.
 
-## Web Interface
-### Sign In and Logout
-- **Sign In**: Allows administrators to log in to the web interface.
-- **Logout**: Securely logs out the user from the web interface.
+## Giao diện Web
+### Đăng nhập và Đăng xuất
+![Đăng nhập và Đăng xuất](./images/log.png)
+- **Đăng Nhập**: Cho phép quản trị viên đăng nhập vào giao diện web.
+- **Đăng Xuất**: Đăng xuất người dùng khỏi giao diện web một cách an toàn.
 
-### Home Tab
-- Displays basic device information and the most recent access method.
+### Tab trang chủ
+![Trang chủ](./images/homepage.png)
+- Hiển thị thông tin cơ bản về thiết bị và phương thức truy cập gần nhất.
 
-### History Tab
-- Shows the access history, including methods and timestamps.
+### Tab lịch sử
+![Lịch sử](./images/history.png)
+- Hiển thị lịch sử truy cập, bao gồm phương thức và thời gian.
 
-### Security Tab
-- **Dynamic Password**: Generate a temporary password for guest access.
-- **Remote Unlock**: Unlock the door remotely by entering the admin password.
+### Tab bảo mật
+![Bảo mật](./images/security.png)
+- **Mật mã tạm thời**: Tạo mật mã tạm thời cho khách.
+- **Mở khóa từ xa**: Mở khóa cửa từ xa bằng cách nhập mật mã quản trị viên.
 
-## NodeRED Flow Explanation
-1. **Login to Website**: Flow for user authentication.
-2. **Device Information**: Flow to display device status.
-3. **Access History**: Flow to show access logs.
-4. **Dynamic Password Creation**: Flow to generate and manage temporary passwords.
-5. **Remote Unlock**: Flow to unlock the door remotely.
+## Các Flow của NodeRED
+1. **Đăng nhập Website**: Luồng xác thực người dùng.
+2. **Thông tin Thiết Bị**: Luồng hiển thị trạng thái thiết bị.
+3. **Lịch Sử Truy Cập**: Luồng hiển thị nhật ký truy cập.
+4. **Tạo Mật Mã Tạm Thời**: Luồng tạo và quản lý mật mã tạm thời.
+5. **Mở Khóa Từ Xa**: Luồng mở khóa cửa từ xa.
 
-## References
-- Project documentation and implementation details are available in the project report.
-- For more information on specific components and libraries used, refer to the source code and related documentation.
+## Tài Liệu Tham Khảo
+- [Làm khóa vân tay đơn giản dùng cảm biến vân tay r305 và kít arduino nano](https://www.youtube.com/watch?v=b1DIAH9GfWA)
+- [How to make fingerprint door lock at home](https://www.youtube.com/watch?v=SMmj_qAbyeM)
+- [Arduino Keypad and LCD display](https://www.youtube.com/watch?v=G2C6_Bp8cwk)
+- [Hướng dẫn giao tiếp uart giữa board arduino với kít wifi esp8266](https://www.youtube.com/watch?v=X7CKYdUB2mw)
+- [Node-Red Dashboard tutorial](https://www.youtube.com/playlist?list=PLhaePTb701HSHPp6r3lbWdnUs8y98OHh)
+- [How to catch time in Node-Red](https://youtu.be/ZcekM0kpg4Y)
+- [Code kết nối Wifi](https://dandelion-croissant-ad4.notion.site/Code-k-t-n-iWifi-tr-n-Wokwi-4055feb3a4844e56914a3ae5bff8a82a)
+- [Code kết nối MQTT Server](https://dandelion-croissant-ad4.notion.site/Codek-t-n-i-MQTT-Server-b708e215b4134638ae1eafe37a7650aa)
+- [Code gửi Http Request từ ESP](https://dandelion-croissantad4.notion.site/Code-g-i-HttpRequest-t-ESPfa27af5c3b0e4750b7d7e8dd1d81a6c3)
