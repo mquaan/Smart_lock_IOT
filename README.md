@@ -50,10 +50,11 @@ Dự án này liên quan đến việc thiết kế và triển khai hệ thốn
 11. **Cloud (ThinkSpeak.com)**: Truyền nhận dữ liệu vói server.
 
 ## Thiết kế 3D
-![Thiết kế 3D - 1](./images/3D.png)
+![Thiết kế 3D - 1](./images/3D_1.png)
 ![Thiết kế 3D - 2](./images/3D-2.png)
-- **Phần A**: Đơn vị bên ngoài với màn hình LCD, cảm biến vân tay và bàn phím.
-- **Phần B**: Đơn vị bên trong với nút mở khóa thủ công.
+![Thiết kế 3D - 3](./images/3D_3.png)
+![Thiết kế 3D - 4](./images/3D-4.png)
+![Thiết kế 3D - 5](./images/3D_5.png)
 
 ## Giao diện Web
 ### Đăng nhập và Đăng xuất
