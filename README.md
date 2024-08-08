@@ -51,9 +51,9 @@ Dự án này liên quan đến việc thiết kế và triển khai hệ thốn
 
 ## Thiết kế 3D
 ![Thiết kế 3D - 1](./images/3D_1.png)
-![Thiết kế 3D - 2](./images/3D-2.png)
+![Thiết kế 3D - 2](./images/3D_2.png)
 ![Thiết kế 3D - 3](./images/3D_3.png)
-![Thiết kế 3D - 4](./images/3D-4.png)
+![Thiết kế 3D - 4](./images/3D_4.png)
 ![Thiết kế 3D - 5](./images/3D_5.png)
 
 ## Giao diện Web
